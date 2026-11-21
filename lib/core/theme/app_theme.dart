@@ -19,7 +19,7 @@ abstract final class AppTheme {
       scaffoldBackgroundColor: Colors.transparent,
       canvasColor: Colors.transparent,
       cardColor: Colors.transparent,
-      dialogBackgroundColor: Colors.transparent,
+      dialogTheme: const DialogThemeData(backgroundColor: Colors.transparent),
     );
 
     return base.copyWith(
