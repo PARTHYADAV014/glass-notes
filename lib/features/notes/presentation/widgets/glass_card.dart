@@ -1,6 +1,6 @@
 import 'dart:ui' as ui;
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../settings/settings_sheet.dart';
@@ -42,7 +42,7 @@ class GlassCard extends ConsumerWidget {
           borderRadius: BorderRadius.circular(borderRadius),
           boxShadow: <BoxShadow>[
             BoxShadow(
-              color: Colors.black.withOpacity(0.1),
+              color: Colors.black.withValues(alpha: 0.1),
               blurRadius: 20,
               offset: const Offset(0, 8),
             ),
@@ -57,8 +57,8 @@ class GlassCard extends ConsumerWidget {
             child: InkWell(
               onTap: onTap,
               borderRadius: BorderRadius.circular(borderRadius),
-              splashColor: Colors.white.withOpacity(0.12),
-              highlightColor: Colors.white.withOpacity(0.06),
+              splashColor: Colors.white.withValues(alpha: 0.12),
+              highlightColor: Colors.white.withValues(alpha: 0.06),
               child: Stack(
                 children: <Widget>[
                   Positioned.fill(
@@ -73,7 +73,7 @@ class GlassCard extends ConsumerWidget {
                           ],
                         ),
                         border: Border.all(
-                          color: Colors.white.withOpacity(borderAlpha),
+                          color: Colors.white.withValues(alpha: borderAlpha),
                           width: 1.2,
                         ),
                         borderRadius: BorderRadius.circular(borderRadius),

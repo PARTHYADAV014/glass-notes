@@ -1,7 +1,7 @@
 import 'dart:math' as math;
 import 'dart:ui' as ui;
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../../core/constants/wallpapers.dart';
@@ -105,7 +105,7 @@ class _AnimatedWallpaperState extends ConsumerState<AnimatedWallpaper>
               center: glow,
               radius: 0.9,
               colors: <Color>[
-                Colors.white.withOpacity(isDark ? 0.07 : 0.16),
+                Colors.white.withValues(alpha: isDark ? 0.07 : 0.16),
                 Colors.transparent,
               ],
             ),

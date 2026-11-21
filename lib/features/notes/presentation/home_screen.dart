@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -74,7 +74,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
               },
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20),
-                side: BorderSide(color: Colors.white.withOpacity(0.45), width: 1.2),
+                side: BorderSide(color: Colors.white.withValues(alpha: 0.45), width: 1.2),
               ),
               child: const Icon(Icons.add_rounded, size: 30),
             ).animate().scale(

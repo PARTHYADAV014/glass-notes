@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 /// Central light/dark themes. Backgrounds stay transparent so the animated
@@ -37,7 +37,7 @@ abstract final class AppTheme {
         behavior: SnackBarBehavior.floating,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
-          side: BorderSide(color: Colors.white.withOpacity(0.3)),
+          side: BorderSide(color: Colors.white.withValues(alpha: 0.3)),
         ),
         contentTextStyle: GoogleFonts.inter(
           color: Colors.white,
@@ -55,13 +55,13 @@ abstract final class AppTheme {
         foregroundColor: Colors.white,
       ),
       dividerTheme: DividerThemeData(
-        color: Colors.white.withOpacity(0.22),
+        color: Colors.white.withValues(alpha: 0.22),
         thickness: 1,
       ),
       textSelectionTheme: TextSelectionThemeData(
-        cursorColor: Colors.white.withOpacity(0.85),
-        selectionColor: Colors.white.withOpacity(0.28),
-        selectionHandleColor: Colors.white.withOpacity(0.85),
+        cursorColor: Colors.white.withValues(alpha: 0.85),
+        selectionColor: Colors.white.withValues(alpha: 0.28),
+        selectionHandleColor: Colors.white.withValues(alpha: 0.85),
       ),
       inputDecorationTheme: InputDecorationTheme(
         border: InputBorder.none,

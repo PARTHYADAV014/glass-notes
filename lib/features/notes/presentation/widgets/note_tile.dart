@@ -1,6 +1,6 @@
 import 'dart:ui' as ui;
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
@@ -45,7 +45,7 @@ class NoteTile extends ConsumerWidget {
               icon: archived
                   ? Icons.unarchive_outlined
                   : (note.isPinned
-                      ? Icons.push_pin_off_outlined
+                      ? Icons.push_pin_outlined
                       : Icons.push_pin_outlined),
               label: archived ? 'Restore' : (note.isPinned ? 'Unpin' : 'Pin'),
               tint: archived ? const Color(0xFF9EE7FF) : const Color(0xFFFFD77A),
@@ -88,7 +88,7 @@ class NoteTile extends ConsumerWidget {
               ],
             ),
       child: GlassCard(
-        padding: const EdgeInsets.zero,
+        padding: EdgeInsets.zero,
         onTap: () {
           Navigator.of(context).push(
             MaterialPageRoute<void>(
@@ -130,7 +130,7 @@ class NoteTile extends ConsumerWidget {
                         colors: <Color>[Color(0x66FFFFFF), Color(0x22FFFFFF)],
                       ),
                       border:
-                          Border.all(color: Colors.white.withOpacity(0.35)),
+                          Border.all(color: Colors.white.withValues(alpha: 0.35)),
                     ),
                     child: Icon(
                       note.isPinned
@@ -228,11 +228,11 @@ class NoteTile extends ConsumerWidget {
             borderRadius: BorderRadius.circular(20),
             gradient: LinearGradient(
               colors: <Color>[
-                tint.withOpacity(0.40),
-                tint.withOpacity(0.12),
+                tint.withValues(alpha: 0.40),
+                tint.withValues(alpha: 0.12),
               ],
             ),
-            border: Border.all(color: Colors.white.withOpacity(0.30)),
+            border: Border.all(color: Colors.white.withValues(alpha: 0.30)),
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

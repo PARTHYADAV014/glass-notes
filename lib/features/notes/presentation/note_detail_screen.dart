@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:uuid/uuid.dart';
@@ -155,7 +155,7 @@ class _NoteDetailScreenState extends ConsumerState<NoteDetailScreen> {
                     const SizedBox(width: 8),
                     FilledButton(
                       style: FilledButton.styleFrom(
-                        backgroundColor: Colors.redAccent.withOpacity(0.8),
+                        backgroundColor: Colors.redAccent.withValues(alpha: 0.8),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(14),
                         ),
@@ -275,7 +275,7 @@ class _NoteDetailScreenState extends ConsumerState<NoteDetailScreen> {
                             expands: true,
                             textAlignVertical: TextAlignVertical.top,
                             style: GoogleFonts.inter(
-                              color: Colors.white.withOpacity(0.92),
+                              color: Colors.white.withValues(alpha: 0.92),
                               fontSize: 16,
                               height: 1.45,
                             ),

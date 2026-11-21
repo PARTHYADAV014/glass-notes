@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hive/hive.dart';
@@ -97,7 +97,7 @@ class SettingsSheet extends ConsumerWidget {
               width: 42,
               height: 4,
               decoration: BoxDecoration(
-                color: Colors.white.withOpacity(0.4),
+                color: Colors.white.withValues(alpha: 0.4),
                 borderRadius: BorderRadius.circular(4),
               ),
             ),
@@ -203,7 +203,7 @@ class _WallpaperSwatch extends StatelessWidget {
             end: Alignment.bottomRight,
           ),
           border: Border.all(
-            color: selected ? Colors.white : Colors.white.withOpacity(0.25),
+            color: selected ? Colors.white : Colors.white.withValues(alpha: 0.25),
             width: selected ? 2.4 : 1,
           ),
         ),
